@@ -1,0 +1,26 @@
+img{border:0px;}
+/* dock */
+#dock{margin:0px; padding:0px; list-style:none; position:fixed; top:0px; height:100%; 
+z-index:100; background-color:#f0f0f0; left:0px; word-break:break-all;}
+#dock > li {width:10px; height:120px; margin: 0 0 1px 0; background-color:#dcdcdc;
+background-repeat:no-repeat; background-position:left center;}
+
+#dock #links {background-image:url(links.png);}
+#dock #files {background-image:url(files.png);}
+#dock #tools {background-image:url(tools.png);}
+
+#dock > li:hover {background-position:-40px 0px;}
+
+/* panels */
+#dock ul li {padding:5px; border: solid 1px #F1F1F1;}
+#dock ul li:hover {background:#D3DAED url(item_bkg.png) repeat-x; border: solid 1px #A8D8EB;}
+#dock ul li.header, #dock ul li .header:hover {background:#D3DAED url(header_bkg.png) repeat-x;border: solid 1px #F1F1F1;}
+
+#dock > li:hover ul {display:block;}
+#dock > li ul {position:absolute; top:0px; left:-180px; z-index:-1;width:180px; display:none;
+background-color:#F1F1F1; border:solid 1px #969696; padding:0px; margin:0px; list-style:none;}
+#dock > li ul.docked { display:block;z-index:-2;}
+
+.dock-keleyi-com,.undock{float:right;}
+.undock {display:none;}
+#netCompare_main {margin: 0px;}

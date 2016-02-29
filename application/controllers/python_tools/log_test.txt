@@ -1,0 +1,11 @@
+2015-07-19 22:02:02 protein_name.py YEAST num_YeastNet.txt log_test.txt
+2390 44 s 
+2015-07-19 22:14:45 protein_name.py YEAST num_YeastNet.txt log_test.txt
+2390 29 s 
+2015-07-19 22:15:25 protein_relation.py YEAST out_YeastNet.txt log_test.txt
+2015-07-19 22:16:16 protein_relation.py YEAST out_YeastNet.txt log_test.txt
+2015-07-19 22:18:48 protein_relation.py YEAST out_YeastNet.txt log_test.txt
+2015-07-19 22:24:24 protein_relation.py YEAST out_YeastNet.txt log_test.txt
+2015-07-19 22:25:01 protein_relation.py YEAST out_YeastNet.txt log_test.txt
+2015-07-19 22:25:59 protein_relation.py YEAST out_YeastNet.txt log_test.txt
+0 1608 s 

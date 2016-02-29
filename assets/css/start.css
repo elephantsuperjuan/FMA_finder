@@ -1,0 +1,24 @@
+.step-item{
+	width: 100%;
+}
+.step-title{
+	padding: 0 40px 10px 40px;
+}
+.step-des{
+	width: 90%;
+	margin-left: 5%;
+	min-width: 460px;
+	padding: 10px 40px 10px 40px;
+	color: #777;
+}
+.btn-div{
+	width: 90%;
+	margin-left: 5%;
+	padding: 0 40px 10px 40px;
+}
+.progress{
+	margin-top: 10px;
+}
+.display-none{
+	display: none;
+} 

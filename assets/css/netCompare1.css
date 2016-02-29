@@ -1,0 +1,35 @@
+body{
+  margin: 0px;
+}
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: white;
+}
+
+.label {
+  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+.link {
+  stroke: #000;
+  opacity: 0.7;
+  stroke-width: 0.1;
+}
+.location{
+  position:absolute;
+  visibility: visible;
+  background-image: url("../location.png");
+  left:30px;
+  top:100px;
+  width: 30px;
+  height: 30px;
+}
