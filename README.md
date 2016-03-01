@@ -6,7 +6,7 @@ The FMA-finder tool visualizes large-scale network alignments between different 
 
 ##Platform
 
-PHP/Apache
+Windows/PHP/Apache
 
 ##Usage
 
@@ -45,6 +45,7 @@ PHP/Apache
 
 ##Related
 
+* [CodeIgniter](https://github.com/bcit-ci/CodeIgniter)
 * [D3.js](https://github.com/mbostock/d3)
 * Jquery
 * Python
