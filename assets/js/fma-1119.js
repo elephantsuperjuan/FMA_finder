@@ -366,10 +366,12 @@ window.onscroll = function(){
                 var alert_str = "";
                 if(node_tmp.matched != -1){
                     var match_tmp = document.getElementById("r_n_0_"+node_tmp.matched);
-                    alert_str = "\n It's matched node is "+match_tmp.__data__.id;
+                    var node_tmp_data = match_tmp.__data__;
+                    alert_str = "\n Matching Node info. is \r Id: "+node_tmp_data.name+" Name: "+node_tmp_data.id+" Parent: "+node_tmp_data.parent.name;
                 }
-                alert(name+"'s parent is "+node_tmp.parent.name+"."+alert_str);
-
+                
+                alert("Node info. is \r Id: "+node_tmp.name+" Name: "+node_tmp.id+" Parent: "+node_tmp.parent.name+alert_str );
+              
                 var newDiv = document.createElement('div');
                 newDiv.setAttribute("id", "location_l_" + name); 
                 newDiv.setAttribute("class", "location"); 
@@ -396,10 +398,12 @@ window.onscroll = function(){
                 var alert_str = "";
                 if(node_tmp.matched != -1){
                     var match_tmp = document.getElementById("l_n_0_"+node_tmp.matched);
-                    alert_str = "\n It's matched node is "+match_tmp.__data__.id;
+                    var node_tmp_data = match_tmp.__data__;
+                    alert_str = "\n Matching Node info. is \r Id: "+node_tmp_data.name+" Name: "+node_tmp_data.id+" Parent: "+node_tmp_data.parent.name;
                 }
-                alert(name+"'s parent is "+node_tmp.parent.name+"."+alert_str);
-
+                
+                alert("Node info. is \r Id: "+node_tmp.name+" Name: "+node_tmp.id+" Parent: "+node_tmp.parent.name+alert_str );
+              
 
                 var diameter = (screen.width/2<screen.height)?screen.width/2:screen.height;
                 var newDiv = document.createElement('div');

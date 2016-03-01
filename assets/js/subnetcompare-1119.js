@@ -76,7 +76,9 @@ var subnetcompare = function(){
               console.log(d);
               var node_tmp = document.getElementById(self.reverse_flag+"n_0_"+d.matched);
               if(!!node_tmp){
-                alert("Matched info is "+d.id+" "+node_tmp.__data__.id);
+                var node_tmp_data = node_tmp.__data__;
+                console.log(d.parent);
+                alert("Node info. is \r Id: "+d.name+" Name: "+d.id+" Parent: "+d.parent.name+" \r Matching Node info. is \r Id: "+node_tmp_data.name+" Name: "+node_tmp_data.id+" Parent: "+node_tmp_data.parent.name);
               }
               zoom(d.parent);
               d3.event.stopPropagation();
