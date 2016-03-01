@@ -14,12 +14,32 @@ PHP/Apache
 * Visit http://localhost/FMA_finder
 
 ### step 1: Visualization
+```javascript
+ //netcompare-1119.js
+ d3.json(file_left, function(error, root){ });
+ d3.json(file_right, function(error, root){ });
+```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/visualization.png)
+
 ### step 2: Node Alignment
+```javascript
+ //fma-1119.js
+ $('#searchNode_ok').click(function(){ });
+```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/node_alignment.png)
+
 ### step 3: Module alignment
+```javascript
+ //fma-1119.js
+ $('#filterNode_ok').click(function(){ });
+```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/module_alignment.png)
+
 ### step 4: Functional module alignment
+```javascript
+ //fma-1119.js
+ $('#filterGOlist_ok').click(function(){ });
+```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/fma.png)
 
 ##Related
