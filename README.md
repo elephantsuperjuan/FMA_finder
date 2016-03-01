@@ -4,6 +4,8 @@
 Functional module alignments (FMAs) are pairs of subnetworks that share similar functions, which are biologically meaningful.
 The FMA-finder tool visualizes large-scale network alignments between different species and provides both analysis and visualization of FMAs.
 
+` Online website`：[http://biocenter.shu.edu.cn/FMA_finder/](http://biocenter.shu.edu.cn/FMA_finder/)
+
 ##Platform
 
 Windows/PHP/Apache
@@ -50,6 +52,7 @@ Windows/PHP/Apache
 * Jquery
 * Python
 * [ppython](https://github.com/elephantsuperjuan/ppython)
+* [Center for Bioinformatics, Shanghai University](http://biocenter.shu.edu.cn/software/)
 
 ## Acknowledgement
 This work was partially supported by Center for Bioinformatics at Shanghai University. 
