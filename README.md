@@ -14,13 +14,13 @@ PHP/Apache
 * Visit http://localhost/FMA_finder
 
 ### step 1: Visualization
-![image](https://github.com/elephantsuperjuan/FMA_finder/about/visualization.png)
+![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/visualization.png)
 ### step 2: Node Alignment
-![image](https://github.com/elephantsuperjuan/FMA_finder/about/node_alignment.png)
+![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/node_alignment.png)
 ### step 3: Module alignment
-![image](https://github.com/elephantsuperjuan/FMA_finder/about/module_alignment.png)
+![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/module_alignment.png)
 ### step 4: Functional module alignment
-![image](https://github.com/elephantsuperjuan/FMA_finder/about/fma.png)
+![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/fma.png)
 
 ##Related
 
