@@ -51,9 +51,9 @@ Windows/PHP/Apache
 * Python
 * [ppython](https://github.com/elephantsuperjuan/ppython)
 
-##Author and Contact
+## Acknowledgement
 This work was partially supported by Center for Bioinformatics at Shanghai University. 
-For more information, please contact jiangx@shu.edu.cn (Jiang Xie) and cjxiang@shu.edu.cn (Chaojuan Xiang)
 
-* Email:(cjxiang@shu.edu.cn)
+## Author and Contact
+* Email: Jiang Xie (jiangx@shu.edu.cn) and Chaojuan Xiang (cjxiang@shu.edu.cn)
 * github: [@elephantsuperjuan](http://github.com/elephantsuperjuan)
