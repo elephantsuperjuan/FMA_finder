@@ -17,7 +17,7 @@ Windows/PHP/Apache
 
 ### step 1: Visualization
 ```javascript
- //netcompare.js (render netowrk on screen)
+ //in ../assets/netcompare.js (render netowrk on screen)
  //render left network by json file
  d3.json(file_left, function(error, root){……});
  //render right network by json file
@@ -27,7 +27,7 @@ Windows/PHP/Apache
 
 ### step 2: Node Alignment
 ```javascript
- //fma.js (find FMA step by step)
+ //in ../assets/fma.js (find FMA step by step)
  // submit form of Search Node
  $('#searchNode_ok').click(function(){……});
 ```
@@ -35,7 +35,7 @@ Windows/PHP/Apache
 
 ### step 3: Module alignment
 ```javascript
- //fma.js (find FMA step by step)
+ //in ../assets/fma.js (find FMA step by step)
  //submit form of Filter Network 
  $('#filterNode_ok').click(function(){……});
 ```
@@ -43,7 +43,7 @@ Windows/PHP/Apache
 
 ### step 4: Functional module alignment
 ```javascript
- //fma.js (find FMA step by step)
+ //in ../assets/fma.js (find FMA step by step)
  //submit form of Filter Network and GO list is not null
  $('#filterNode_ok').click(function(){……});
 ```
