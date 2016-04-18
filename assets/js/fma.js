@@ -1,4 +1,4 @@
-
+// search node by name
 function findList(name,nodelist){
     //0 false;1 true;-1 new;
     for(var key in nodelist) {
@@ -9,10 +9,10 @@ function findList(name,nodelist){
     return 0;
 }
 
-//给定node_parent的编号，获取其子namelist
+//search children's namelist by node id
 function getChildrenNamelist(parent){
-    /* 输入参数 parent：n_0_1  pre:l_/r_
-       输出参数 list:childrenlist的name列表        */
+    /* input:  parent(n_0_1)  pre:l_/r_
+       output: list(children's namelist)       */
     var list = [];
     if(parent.name.substring(0,4)=="n_0_"){
         list.push(parent.id);
@@ -25,6 +25,7 @@ function getChildrenNamelist(parent){
     return list;
 }
 
+// clone node information
 function cloneNode(node,flag){
     var new_node = new Object();
     new_node.children = undefined;
@@ -43,6 +44,7 @@ function cloneNode(node,flag){
     return new_node;
 }
 
+// update node information by nodelist
 function traverseNode_update(jsonnode,nodelist){
     var new_json=undefined;
     if(jsonnode.children){
@@ -70,6 +72,7 @@ function traverseNode_update(jsonnode,nodelist){
     return new_json;
 }
 
+// update link information by nodelist
 function traverseLink_update(jsonlink,nodelist){
     var new_json = [];
     var length = jsonlink.length;
@@ -90,6 +93,8 @@ function traverseLink_update(jsonlink,nodelist){
     };
     return new_json;
 }
+
+//filter network information by nodelist
 function filterJson(jsonall,nodelist){
     var nodes_tmp = jsonall.nodes;
     var links_tmp = jsonall.links;
@@ -104,7 +109,8 @@ function filterJson(jsonall,nodelist){
     jsonall_tmp.links = sublinks_tmp;
     return jsonall_tmp;
 }
-//在原来基础上进行帅选GO
+
+//update nodes' GO information by nodelist
 function traverseNode_updatebyGO(jsonnode,nodelist){
     if(jsonnode.children!=undefined){
         var children_tmp = jsonnode.children;
@@ -121,6 +127,7 @@ function traverseNode_updatebyGO(jsonnode,nodelist){
     }
 }
 
+//update network's GO information by nodelist
 function filterJsonbyGO(jsonall,nodelist){
     var nodes_tmp = jsonall.nodes,
         subnodes_tmp = nodes_tmp[0];
@@ -136,6 +143,7 @@ function filterJsonbyGO(jsonall,nodelist){
     return jsonall_tmp;
 }
 
+//serach node by GO
 function findNodebyGO(golist,gotarget){
     for (var i = 0; i < gotarget.length; i++) {
         for (var j = 0; j < golist.length; j++) {
@@ -146,8 +154,10 @@ function findNodebyGO(golist,gotarget){
     };
     return false;
 }
+
 var json1_text = document.getElementById('json1');
 var json2_text = document.getElementById('json2');
+//Turn node information into String
 function nodeString(nodes_object,flag,isfirst){
     var isfirst = arguments[2] ? arguments[2] : false;
     var str;
@@ -187,6 +197,7 @@ function nodeString(nodes_object,flag,isfirst){
         json_text.innerText = json_text.value + str;
     }
 }
+//Turn link information into String
 function linkString(links_object,str){
     for (var i = 0; i < links_object.length; i++) {
         if(i==0)
@@ -196,6 +207,7 @@ function linkString(links_object,str){
     };
     return str;
 }
+////Turn network information into String
 function jsonString(m_json,flag){
     var nodes = m_json.nodes;
     var links = m_json.links;
@@ -218,6 +230,7 @@ function jsonString(m_json,flag){
     // return nodes_str+links_str;
 }
 
+// filter node by left flag (l_)
 function filterNodePosition_left(value){
     var id_flag = value.id.substring(0,2);
     if(id_flag=='l_')
@@ -225,6 +238,7 @@ function filterNodePosition_left(value){
     else
         return false;
 }
+// filter node by right flag (r_)
 function filterNodePosition_right(value){
     var id_flag = value.id.substring(0,2);
     if(id_flag=='r_')
@@ -232,7 +246,7 @@ function filterNodePosition_right(value){
     else
         return false;
 }
-
+// filter two networks by GO's list (GO:******)
 function filterGOSub(json_left,json_right,golist){
 
     var jsonsub_left={}, jsonsub_right={};
@@ -315,6 +329,7 @@ function filterGOSub(json_left,json_right,golist){
     });
 }
 
+//window onscroll action
 window.onscroll = function(){
     var t = document.documentElement.scrollTop || document.body.scrollTop;
     var top_div = document.getElementsByTagName("header")[0];
@@ -325,6 +340,7 @@ window.onscroll = function(){
     }
 }
 
+//main function
  $(document).ready(function () {
     // $('[data-toggle="tooltip"]').tooltip();
     $('#menu').tooltip('show');
@@ -332,15 +348,18 @@ window.onscroll = function(){
         $(this).tooltip('hide');
     });
 
+    //some variables are destroyed when the modal is closed
     //模态框关闭时销毁前面的对象
     $('#filterNetworkModal').on('hidden.bs.modal', function (e){
       $('#subcontent').html('<div class="form-group col-md-6" id="subnetwork1"></div><div class="form-group col-md-6" id="subnetwork2"></div>');
     });
 
+    // open the modal of Search Node
     $('#searchNode').click(function(){
         $('#searchNodeModal').modal('show');
     });
     $('#searchNode_form').submit(function(){return false;});
+    // submit form of Search Node
     $('#searchNode_ok').click(function(){
         $('#searchNodeModal').modal('hide');
         var name = $('#nodename').val();
@@ -422,7 +441,7 @@ window.onscroll = function(){
         return false;
     });
         
-    
+    // open the modal of Filter Network
     $('#filterNode').click(function(){
         $('#filterNodeModal').modal('show');
     });
@@ -445,6 +464,8 @@ window.onscroll = function(){
         }
     });
     $('#filterNode_form').submit(function(){return false;});
+
+    // submit form of Filter Network
     $('#filterNode_ok').click(function(){
         $('#filterNodeModal').modal('hide');
         var nodelist1 = $('#nodelist1').val().split('\n');
@@ -480,15 +501,6 @@ window.onscroll = function(){
                     return false;
                 }
                 node_tmp_left = node_tmp_lefts[0];
-                
-                // var node_tmp_left;
-                // for (var i = node_tmp_lefts.length - 1; i >= 0; i--) {
-                //     var id_flag = node_tmp_lefts[i].id.substring(0,2);
-                //     if(id_flag=='l_'){
-                //         node_tmp_left = node_tmp_lefts[i];
-                //         break;
-                //     }
-                // };
 
                 if(node_tmp_left.__data__.matched != -1){
                     nodelist1[i]=node_tmp_left.__data__.name;
@@ -507,15 +519,7 @@ window.onscroll = function(){
                 }else{
                     node_tmp_right = node_tmp_rights[0];
                 }
-                // var node_tmp_right;
-                // for (var i = node_tmp_rights.length - 1; i >= 0; i--) {
-                //     var id_flag = node_tmp_rights[i].id.substring(0,2);
-                //     if(id_flag=='r_'){
-                //         node_tmp_right = node_tmp_rights[i];
-                //     }
-                // };
 
-                
                 if(node_tmp_right.__data__.matched != -1){
                     nodelist1[i]="n_0_"+node_tmp_right.__data__.matched;
                     nodelist2[i]=node_tmp_right.__data__.name;
@@ -579,10 +583,13 @@ window.onscroll = function(){
         return false;
     });
 
+    // open the modal of Filter GO Network
     $('#filterGO').click(function(){
         $('#filterGOlistModal').modal('show');
     });
     $('#filterGOlist_form').submit(function(){return false;});
+    
+    // submit form of Filter GO Network
     $('#filterGOlist_ok').click(function(){
         $('#filterGOlistModal').modal('hide');
         var golist = $('#golist').val().split('\n'); 

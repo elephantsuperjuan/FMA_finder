@@ -17,31 +17,35 @@ Windows/PHP/Apache
 
 ### step 1: Visualization
 ```javascript
- //netcompare.js
+ //netcompare.js (render netowrk on screen)
+ //render left network by json file
  d3.json(file_left, function(error, root){……});
+ //render right network by json file
  d3.json(file_right, function(error, root){……});
 ```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/visualization.png)
 
 ### step 2: Node Alignment
 ```javascript
- //fma.js
+ //fma.js (find FMA step by step)
+ // submit form of Search Node
  $('#searchNode_ok').click(function(){……});
 ```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/node_alignment.png)
 
 ### step 3: Module alignment
 ```javascript
- //fma.js
+ //fma.js (find FMA step by step)
+ //submit form of Filter Network 
  $('#filterNode_ok').click(function(){……});
 ```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/module_alignment.png)
 
 ### step 4: Functional module alignment
 ```javascript
- //fma.js
+ //fma.js (find FMA step by step)
+ //submit form of Filter Network and GO list is not null
  $('#filterNode_ok').click(function(){……});
- $('#filterGOlist_ok').click(function(){……});
 ```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/fma.png)
 

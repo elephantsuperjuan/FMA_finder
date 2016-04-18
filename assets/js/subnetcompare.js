@@ -1,5 +1,5 @@
 var subnetcompare = function(){
-
+  // render sub-network on screen
   var width = (screen.width/2<screen.height)?screen.width/2:screen.height;
       width = width-100;
   var submargin = 5,
@@ -55,6 +55,7 @@ var subnetcompare = function(){
 
   };
 
+  // render view of sub-network
   var renderSub = function(json){
         //sub svg
         var sub_root = json.nodes[0],

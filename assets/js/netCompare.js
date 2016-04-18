@@ -1,5 +1,5 @@
 var netcompare =(function(){
-
+// render netowrk on screen
 var allWidth = screen.width/2,
      allHeight = screen.height;
 
@@ -34,7 +34,7 @@ var file_right = $('#jsonright').attr("value");
 //alert(file_right);
 
 
-//json数据类型
+// json objects
 var json_left,json_right;
 
 var color = d3.scale.linear()
@@ -101,7 +101,7 @@ function getNamelist(jsonnode){
   return namelist;
 }
 
-//涉及到另一个图，暂时不考虑
+//record a point by node
 function recordPoint(d,flag){
   var v = view_left,v2 = view_right;
   var k = diameter / v[2]; 
@@ -128,7 +128,7 @@ function recordPoint(d,flag){
   }
 }
 
-
+// zoom the view by click on nodes
 function zoom(d,flag,rank) {
   var focus0 = focus; focus = d;
 
@@ -174,6 +174,7 @@ function zoom(d,flag,rank) {
     }
 }
 
+// zoom the view by node information
 var zoomTo = function(v,flag) {
   var k;
   if(flag=="left"){
@@ -210,6 +211,7 @@ var zoomTo = function(v,flag) {
 }
 
 var left_root,right_root;
+//left view
 d3.json(file_left, function(error, root) {
   if (error) return console.error(error);
   root_tmp = root;
@@ -219,10 +221,6 @@ d3.json(file_left, function(error, root) {
 
   json_left = root_tmp;
 
-  // var parent_left = new subnetcompare();
-  //     parent_left.setParam("section1","l_","left","content");
-  //     parent_left.renderSub(json_left);
-
   circle_left = svg_left.selectAll("circle")
       .data(nodes)
       .enter().append("circle")
@@ -231,23 +229,7 @@ d3.json(file_left, function(error, root) {
       .attr("name",function(d){return d.id;})
       .attr("data_match",function(d){return d.matched;})
       .style("fill", function(d) { return d.children ? color(d.depth) : d.color; })
-      //.on("click", function(d) { //if (focus !== d)
-      //   if(d.name.substring(2,6)=='n_0_'){
-      //       // location_left.style.top = (d.y-22)+"px";
-      //       // location_left.style.left = (d.x-6)+"px";
-      //       // recordPoint(d,"left");
-      //       alert(d.matched);
-      //       // zoom(d,"left",1), d3.event.stopPropagation(); 
-      //   }
-      //   else{
-      //     zoom(d,"left",1), d3.event.stopPropagation(); 
-      //   }
-      // })
       .on("mouseover", function(d){
-        // location_left.style.top = (d.y-22)+"px";
-        // location_left.style.left = (d.x-6)+"px";
-        // recordPoint(d,"left");
-
         if(d.name.substring(2,6)=='n_0_'){
           alert(d.name);
         }
@@ -309,6 +291,7 @@ d3.json(file_left, function(error, root) {
 
 });
 
+// right view
 d3.json(file_right, function(error, root) {
   if (error) return console.error(error);
   root_tmp = root;
@@ -326,19 +309,6 @@ d3.json(file_right, function(error, root) {
       .attr("name",function(d){return d.id;})
       .attr("data_match",function(d){return d.matched;})
       .style("fill", function(d) { return d.children ? color(d.depth) : d.color; })
-      //.on("click", function(d) { //if (focus !== d)
-      //  alert(d.name);
-      //   if(d.name.substring(2,6)=='n_0_'){
-      //       // location_right.style.top = (d.y-22)+"px";
-      //       // location_right.style.left = (d.x-6)+diameter+88+"px";
-      //       // recordPoint(d,"right");
-      //       alert(d.matched);
-      //       // zoom(d,"left",1), d3.event.stopPropagation(); 
-      //   }
-      //   else{
-      //     zoom(d,"right",1), d3.event.stopPropagation();
-      //   }
-      //})
       .on("mouseover", function(d){
         return tooltip.style("visibility", "visible").text(d.name);
       })
