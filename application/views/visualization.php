@@ -203,6 +203,6 @@
 <script type="text/javascript" src="<?php echo base_url('assets/d3/d3.js') ?>"></script> 
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/d3/json.js') ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/subnetcompare-1119.js') ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/netCompare-1119.js') ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/js/fma-1119.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/subnetcompare.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/netCompare.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/fma.js') ?>"></script>

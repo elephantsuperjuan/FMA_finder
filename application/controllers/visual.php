@@ -12,7 +12,7 @@ class visual extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('welcome');
+		$this->load->view('main');
 	}
 	public function dataset()
 	{
@@ -157,7 +157,7 @@ class visual extends CI_Controller {
 		$this->data["net1_gofile"] = $get_json->net1_gofile;
 		$this->data["net2_gofile"] = $get_json->net2_gofile;
 
-		$this->load->view('1111',$this->data);
+		$this->load->view('visualization',$this->data);
 	}
 	public function visualize()
 	{
@@ -170,15 +170,8 @@ class visual extends CI_Controller {
 
 		redirect('visual/visualization/?str='.$get_str, "refresh");
 
-		// $this->load->view('1111',$this->data);
 	}
-
-	public function visualize_test()
-	{
-		$this->data["net1"] = base_url('assets/json/hga_humannet.json');
-		$this->data["net2"] = base_url('assets/json/hga_yeastnet.json');
-		$this->load->view('0506',$this->data);
-	}
+	
 	public function uploadfile()
 	{
 		$this->load->view('upload_demo');

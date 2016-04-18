@@ -1,12 +1,5 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-use Everyman\Neo4j\Client,
-	Everyman\Neo4j\Index\NodeIndex,
-	Everyman\Neo4j\Relationship,
-	Everyman\Neo4j\Node;
-
-require_once 'example_bootstrap.php';
-
 class uploadfile extends CI_Controller {
 
 	function __construct()

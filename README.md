@@ -17,7 +17,7 @@ Windows/PHP/Apache
 
 ### step 1: Visualization
 ```javascript
- //netcompare-1119.js
+ //netcompare.js
  d3.json(file_left, function(error, root){……});
  d3.json(file_right, function(error, root){……});
 ```
@@ -25,21 +25,21 @@ Windows/PHP/Apache
 
 ### step 2: Node Alignment
 ```javascript
- //fma-1119.js
+ //fma.js
  $('#searchNode_ok').click(function(){……});
 ```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/node_alignment.png)
 
 ### step 3: Module alignment
 ```javascript
- //fma-1119.js
+ //fma.js
  $('#filterNode_ok').click(function(){……});
 ```
 ![image](https://github.com/elephantsuperjuan/FMA_finder/blob/master/about/module_alignment.png)
 
 ### step 4: Functional module alignment
 ```javascript
- //fma-1119.js
+ //fma.js
  $('#filterNode_ok').click(function(){……});
  $('#filterGOlist_ok').click(function(){……});
 ```
